@@ -1,0 +1,156 @@
+/*
+
+    ./styles/preview/preview.module.scss
+
+    Copyright (C) 2022, Anokidev. This file is 
+    part of Anokidev's website. Anokidev's website 
+    is open-source and is licensed in MIT License.
+
+    This file is used to style the preview component.
+
+*/
+
+// Main.
+.previewContainer {
+
+    width: 100%;
+    background-color: $light-color;
+    display: flex;
+    flex-direction: row;
+
+    margin-top: 50px;
+    margin-bottom: 50px;
+
+    border: 2px solid white;
+
+};
+
+// Image.
+.imageContainer {
+
+    border-right: 2px solid white;
+    padding: 10px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+};
+
+// Description.
+.descContainer {
+
+    max-width: 50%;
+
+    display: flex;
+    flex-direction: column;
+
+    padding: 2%;
+
+};
+
+.textContainer {
+
+    display: flex;
+    flex-direction: column; 
+    height: 80%;
+
+};
+
+// Control panel.
+
+.controlContainer {
+
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+
+    align-items: center;
+
+    height: 20%;
+
+    p {
+        text-align: center;
+    };
+
+};
+
+// Button.
+.buttonContainer {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 25%;
+    height: 85%;
+    padding: 1%;
+
+    margin-left: 20px;
+    margin-right: 20px;
+
+    background-color: $dark-color;
+
+    &:hover {
+        background-color: $hover-color;
+    };
+
+};
+
+// Anchor. Have to do this because of the stupid CSS.
+.buttonAnchor {
+
+    a {
+
+        text-decoration: none;
+        text-shadow: none;
+
+        &:hover {
+            text-shadow: none;
+        };
+
+    };
+};
+
+// Gotta stay responsive!
+@media (max-width: 800px) {
+
+    .previewContainer {
+
+        flex-direction: column;
+    
+    };
+
+    .imageContainer {
+
+        border-right: none;
+        padding: 10px;
+    
+    };
+
+    .descContainer {
+
+        border-top: 2px solid white;
+        max-width: 100%;
+        flex-direction: column-reverse;
+    
+    };
+
+    .buttonContainer {
+
+        height: 1%;
+        margin: 20px;
+
+    };
+
+};
+
+@media (max-width: 450px) {
+    .controlContainer {
+        flex-direction: column;
+    };
+    .buttonContainer {
+        width: 60%;
+    };
+};
+

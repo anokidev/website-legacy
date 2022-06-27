@@ -1,0 +1,103 @@
+/*
+
+    ./styles/preview/preview.module.scss
+
+    Copyright (C) 2022, Anokidev. This file is 
+    part of Anokidev's website. Anokidev's website 
+    is open-source and is licensed in MIT License.
+
+    This file is used to style the preview component.
+
+*/
+
+// Main.
+.previewContainer {
+
+    width: 100%;
+    background-color: $light-color;
+    display: flex;
+    flex-direction: row;
+
+    margin-top: 50px;
+    margin-bottom: 50px;
+
+    border: 2px solid white;
+
+};
+
+// Image.
+.imageContainer {
+
+    border-right: 2px solid white;
+    padding: 10px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+};
+
+// Description.
+.descContainer {
+
+    max-width: 50%;
+
+    display: flex;
+    flex-direction: column;
+
+    padding: 2%;
+
+};
+
+// Button.
+.buttonContainer {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 30%;
+    height: 20%;
+
+    background-color: $dark-color;
+
+    &:hover {
+        background-color: $hover-color;
+    };
+
+};
+
+// Gotta stay responsive!
+@media (max-width: 800px) {
+
+    .previewContainer {
+
+        flex-direction: column;
+    
+    };
+
+    .imageContainer {
+
+        border-right: none;
+        padding: 10px;
+    
+    };
+
+    .descContainer {
+
+        border-top: 2px solid white;
+        max-width: 100%;
+    
+    };
+
+};
+
+@media (max-width: 450px) {
+
+    .buttonContainer {
+        width: 60%;
+        text-align: center;
+    };
+
+};
+
