@@ -22,6 +22,7 @@ import '@styles/globals/globals.scss';
 
 function MyApp({ Component, pageProps }: AppProps): ReactElement {
 
+  // Include some meta tags.
   return (
     <>
       <Head>

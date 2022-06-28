@@ -51,6 +51,23 @@
 
 };
 
+.buttonContainer {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 30%;
+    height: 20%;
+
+    background-color: $dark-color;
+
+    &:hover {
+        background-color: $hover-color;
+    };
+
+};
+
 @media (max-width: 600px) {
     .pageContainer {
         font-size: 15px;

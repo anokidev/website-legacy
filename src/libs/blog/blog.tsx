@@ -6,7 +6,7 @@
   part of Anokidev's website. Anokidev's website 
   is open-source and is licensed in MIT License.
 
-  This file is used as the preview component.
+  This file is used as the blog component.
 
 */
 
@@ -15,7 +15,6 @@ import react, { ReactElement } from "react";
 
 // Next.
 import Image from "next/image";
-import Link from "next/link";
 
 // SCSS.
 import styles from "@styles/preview/preview.module.scss";
@@ -26,10 +25,11 @@ interface Props {
   alt:   string;
   text:  string;
   title: string;
-  goto:  string;
+  date:  string;
 };
 
-class Preview extends react.Component<Props, {}> {
+// Component.
+class Blog extends react.Component<Props, {}> {
 
   render(): ReactElement {
 
@@ -38,9 +38,7 @@ class Preview extends react.Component<Props, {}> {
     const alt: string   = this.props.alt;
     const text: string  = this.props.text;
     const title: string = this.props.title;
-    const goto: string  = this.props.goto;
-
-    console.log(src)
+    const date: string  = this.props.date;
 
     return (
     
@@ -55,8 +53,9 @@ class Preview extends react.Component<Props, {}> {
         <div className={styles.descContainer}>
             <h1>{title}</h1>
             <p>{text}</p>
+            <p>{date}</p>
             <div className={styles.buttonContainer}>
-                  <Link href={goto}><p>Read More</p></Link>
+                  <p>Read More</p>
             </div>
         </div>
 
@@ -68,4 +67,4 @@ class Preview extends react.Component<Props, {}> {
 
 };
 
-export default Preview;
+export default Blog;

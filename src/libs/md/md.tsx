@@ -23,7 +23,7 @@ import rehypeRaw from "rehype-raw";
 import styles from "@styles/md/md.module.scss";
 
 interface Props {
-  text: string
+  text: string;
 };
 
 // Component.

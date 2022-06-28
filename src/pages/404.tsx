@@ -15,6 +15,7 @@ import react, { ReactElement } from "react";
 
 // Next head.
 import Head from 'next/head';
+import Link from "next/link";
 
 // SCSS.
 import styles from "@styles/page/page.module.scss";
@@ -31,7 +32,7 @@ class Custom404Page extends react.Component {
 
         {/* Head */}
         <Head>
-          <title>Projects | Anokidev</title>
+          <title>404 Not Found | Anokidev</title>
         </Head>
 
         {/* Body */}
@@ -39,6 +40,9 @@ class Custom404Page extends react.Component {
           <h1>An error has occurred.</h1>
           <h3>404: Not found.</h3>
           <p>This is caused because the link you just typed is broken. Either the page does not exist, moved temporarily, or moved permanently.</p>
+          <div className={styles.buttonContainer}>
+            <Link href="/home"> Go Back to Home</Link>
+          </div>
           <br></br>
           <br></br>
           <br></br>

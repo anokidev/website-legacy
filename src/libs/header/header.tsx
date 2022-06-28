@@ -27,8 +27,8 @@ import styles from "@styles/header/header.module.scss";
 
 // State interface.
 interface State {
-  opened: boolean, 
-  component: ReactElement
+  opened:    boolean;
+  component: ReactElement;
 };
 
 // Header.
@@ -40,11 +40,11 @@ class Header extends react.Component<{}, State> {
 
       // Set initial state.
       this.state = {
-          opened: false,
+          opened:    false,
           component: <></>
       }; 
         
-      // Binding this keyword .
+      // Binding openMobileMenu.
       this.openMobileMenu = this.openMobileMenu.bind(this);
 
   };

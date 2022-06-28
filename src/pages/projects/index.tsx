@@ -10,25 +10,47 @@
 
 */
 
+// Node.
+import fs from 'fs';
+import path from 'path';
+
 // React.
 import react, { ReactElement } from "react";
 
 // Next head.
-import Head from 'next/head';
+import Head from "next/head";
 
-// Header and footer.
+// Graymatter.
+import matter from "gray-matter";
+
+// Libs.
 import Header from "@libs/header/header";
 import Footer from "@libs/footer/footer";
-import UnderConstruction from "@libs/under-construction/under-construction";
+import Preview from "@libs/preview/preview";
 
 // SCSS.
 import styles from "@styles/page/page.module.scss";
 
+interface Props {
+  text: string[];
+};
+
 // Page.
-class Projects extends react.Component {
+class Projects extends react.Component<Props, {}> {
 
   // Render.
   render(): ReactElement {
+
+    // Generate projects list.
+    const projectItems: any[] = [];
+    
+    this.props.text.forEach((notParsedProject) => {
+      const project = matter(notParsedProject)
+      console.log(`AAAAA ${console.log(project.data.ImageSrc)}`)
+      projectItems.push(
+        <Preview src={project.data.imageSrc} alt={project.data.imageAlt} text={project.data.desc} title={project.data.title} goto={project.data.goto} />
+      );
+    });
 
     return (
 
@@ -44,28 +66,8 @@ class Projects extends react.Component {
 
         {/* Body */}
         <div className={styles.pageContainer}>
-          <UnderConstruction />
           <h1>Projects</h1>
-          <p>Coming soon!</p>
-          <br></br>
-          <br></br>
-          <br></br>
-          <br></br>
-          <br></br>
-          <br></br>
-          <br></br>
-          <br></br>
-          <br></br>
-          <br></br>
-          <br></br>
-          <br></br>
-          <br></br>
-          <br></br>
-          <br></br>
-          <br></br>
-          <br></br>
-          <br></br>
-          <br></br>
+            {projectItems}
         </div>
 
         {/* Footer */}
@@ -73,10 +75,31 @@ class Projects extends react.Component {
 
       </>
 
-    )
+    );
 
   };
 
+};
+
+// Get the projects content via Supabase PostgreSQL REST API.
+export async function getServerSideProps() {
+
+  // Get the path.
+  const projectDirectory: string = path.join(
+    process.cwd(), "content/projects/");
+
+  // List all directories.
+  const files: string[] = fs.readdirSync(projectDirectory, 'utf8');
+
+  const text: string[] = [];
+
+  files.forEach((file) => {
+    text.push(path.join(projectDirectory, file));
+  });
+
+  // Pass data to the page via props.
+  return { props: { text } };
+  
 };
 
 export default Projects;

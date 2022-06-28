@@ -14,8 +14,7 @@
 import react, { ReactElement } from "react";
 
 // Next head.
-import Head from "next/head";
-import Link from "next/link";
+import Head from 'next/head';
 
 // SCSS.
 import styles from "@styles/page/page.module.scss";
@@ -32,7 +31,7 @@ class Custom500Page extends react.Component {
 
         {/* Head */}
         <Head>
-          <title>500 - Internal Server Error | Anokidev</title>
+          <title>Projects | Anokidev</title>
         </Head>
 
         {/* Body */}
@@ -40,9 +39,7 @@ class Custom500Page extends react.Component {
           <h1>An error has occurred.</h1>
           <h3>500: Internal server error.</h3>
           <p>This is caused by an internal server error. Only the administrator can fix this error.</p>
-          <div className={styles.buttonContainer}>
-            <Link href="/home"> Go Back to Home</Link>
-          </div>
+          <br></br>
           <br></br>
           <br></br>
           <br></br>

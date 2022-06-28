@@ -21,19 +21,19 @@ import styles from "@styles/slideshow/slideshow.module.scss";
 
 // Props interface.
 interface Props {
-  src: string[],
-  alt: string[],
-  text: string[],
-  title: string[],
+  src:   string[];
+  alt:   string[];
+  text:  string[];
+  title: string[];
 };
 
 // Props interface.
 interface States {
-  src: string,
-  alt: string,
-  text: string,
-  title: string,
-  index: number
+  src:   string;
+  alt:   string;
+  text:  string;
+  title: string;
+  index: number;
 };
 
 class Preview extends react.Component<Props, States> {
@@ -44,16 +44,16 @@ class Preview extends react.Component<Props, States> {
 
     // Set initial state.
     this.state = {
-      src: this.props.src[0],
-      alt: this.props.alt[0],
-      text: this.props.text[0],
+      src:   this.props.src[0],
+      alt:   this.props.alt[0],
+      text:  this.props.text[0],
       title: this.props.title[0],
       index: 0
     }; 
       
     // Binding this keyword .
     this.previous = this.previous.bind(this);
-    this.next = this.next.bind(this);
+    this.next     = this.next.bind(this);
 
 
   };

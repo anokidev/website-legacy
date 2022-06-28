@@ -20,13 +20,12 @@
     "baseUrl": ".",
     "paths": {
       "@libs/*": ["./src/libs/*"],
-      "@styles/*": ["./src/styles/*"],
-      "@contents/*": ["./src/contents/*"],
+      "@styles/*": ["./src/styles/*"]
     }
 
   },
 
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".env.local"],
   "exclude": ["node_modules"]
 
 }
