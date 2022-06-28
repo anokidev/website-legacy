@@ -1,6 +1,6 @@
 /*
 
-  ./src/pages/about/index.tsx
+  ./src/libs/md/md.tsx
 
   Copyright (C) 2022, Anokidev. This file is 
   part of Anokidev's website. Anokidev's website 

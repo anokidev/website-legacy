@@ -1,12 +1,12 @@
 /*
 
-    ./src/pages/about/index.tsx
+  ./src/pages/home/index.tsx
 
-    Copyright (C) 2022, Anokidev. This file is 
-    part of Anokidev's website. Anokidev's website 
-    is open-source and is licensed in MIT License.
+  Copyright (C) 2022, Anokidev. This file is 
+  part of Anokidev's website. Anokidev's website 
+  is open-source and is licensed in MIT License.
 
-    This file is used as the about page.
+  This file is used as the home page.
 
 */
 
@@ -35,8 +35,8 @@ class Home extends react.Component {
     const previewText: string = "Welcome to my personal website. My name is Anoki Youssou Fauzan Tanuel, also known as Anokidev. I am a 14 years old kid that is learning how to code. I am currently focusing on web development, but I am planning to learn more about low level programming such as C, assembly, and C++ plus hot new technologies such as Go, Rust, and Zig. You can click the 'Read More' button to read more about me!";
 
     const srcGallery: string[] = [
-      '/home/1.png', 
-      '/home/2.png'
+      '/pages/home/1.png', 
+      '/pages/home/2.png'
     ];
 
     const altGallery: string[] = [

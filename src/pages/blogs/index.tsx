@@ -1,12 +1,12 @@
 /*
 
-  ./src/pages/projects/index.tsx
+  ./src/pages/blogs/index.tsx
 
   Copyright (C) 2022, Anokidev. This file is 
   part of Anokidev's website. Anokidev's website 
   is open-source and is licensed in MIT License.
 
-  This file is used as the projects page.
+  This file is used as the blogs page.
 
 */
 
