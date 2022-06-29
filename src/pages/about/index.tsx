@@ -24,7 +24,6 @@ import Head from 'next/head';
 import Header from "@libs/header/header";
 import Footer from "@libs/footer/footer";
 import Md from "@libs/md/md";
-import UnderConstruction from "@libs/under-construction/under-construction";
 
 // SCSS.
 import styles from "@styles/page/page.module.scss";
@@ -55,7 +54,10 @@ class About extends react.Component<Props, {}> {
 
         {/* Body */}
         <div className={styles.pageContainer}>
-          <UnderConstruction />
+          <div style={{display: 'flex', justifyContent: 'center', flexDirection: 'column', textAlign: 'center'}}>
+            <h1>About</h1>
+            <p>This is my about page.</p>
+          </div>
           <Md text={this.props.data}/>
         </div>
 
@@ -74,7 +76,7 @@ class About extends react.Component<Props, {}> {
 export async function getServerSideProps() {
 
   // Get the path, then read.
-  const contentDirectory: string = path.join(process.cwd(), 'content/about');
+  const contentDirectory: string = path.join(process.cwd(), 'public/content/about');
   const fullPath: string = path.join(contentDirectory, 'about.md');
   const data: string = fs.readFileSync(fullPath, 'utf8');
 

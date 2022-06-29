@@ -21,7 +21,6 @@ import Header from "@libs/header/header";
 import Footer from "@libs/footer/footer";
 import Preview from "@libs/preview/preview";
 import Slideshow from "@libs/slideshow/slideshow";
-import UnderConstruction from "@libs/under-construction/under-construction";
 
 // SCSS.
 import styles from "@styles/page/page.module.scss"
@@ -35,8 +34,8 @@ class Home extends react.Component {
     const previewText: string = "Welcome to my personal website. My name is Anoki Youssou Fauzan Tanuel, also known as Anokidev. I am a 14 years old kid that is learning how to code. I am currently focusing on web development, but I am planning to learn more about low level programming such as C, assembly, and C++ plus hot new technologies such as Go, Rust, and Zig. You can click the 'Read More' button to read more about me!";
 
     const srcGallery: string[] = [
-      '/pages/home/1.png', 
-      '/pages/home/2.png'
+      '/images/home/1.png', 
+      '/images/home/2.png'
     ];
 
     const altGallery: string[] = [
@@ -69,11 +68,12 @@ class Home extends react.Component {
         {/* Body */}
         <div className={styles.pageContainer}>
 
-          <UnderConstruction />
+          <div style={{display: 'flex', justifyContent: 'center', flexDirection: 'column', textAlign: 'center'}}>
+            <h1>Home</h1>
+            <p>Welcome to my website! You are free to explore my website. I use this website as a blogging, a personal, and a portofolio website. This website is <a href="https://www.github.com/anokidev/website">open source</a>. So I am part of the open-source movement, right?</p>
+          </div>
 
-          <h1>Home</h1>
-
-          <Preview src="/pages/home/1.png" alt="a" text={previewText} title={previewTitle} goto="https://anokidev.netlify.app/about"/>
+          <Preview src="/images/home/1.png" alt="a" text={previewText} title={previewTitle} goto="https://anokidev.netlify.app/about"/>
 
           <h1>Intro</h1>
 

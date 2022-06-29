@@ -149,7 +149,7 @@ class Header extends react.Component<{}, State> {
               {/* Image Container */}
               <div className={styles.imageContainer}>
                   <div className={styles.imageWrapper}>
-                      <Image alt="logo" src="/navbar/logo.png" width="40" height="40"/>
+                      <Image alt="logo" src="/images/navbar/logo.png" width="40" height="40"/>
                   </div>
               </div>
 

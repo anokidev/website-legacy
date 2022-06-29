@@ -1,4 +1,4 @@
-# About <a id="about"></a>
+<a id="about"></a>
 
 My name is Anoki Youssou Fauzan Tanuel, also know as Anokidev, I am a 14 years old kid who is learning how to code. Currently, I am focusing to the world of frontend web development (Javascript, Typescript, CSS, SCSS, React, Svelte, Next.Js, Angular, etc). However, I like to expand my focus to datascience (R, Anaconda, Python, Panda, NumPy, etc), system administration (sysadmin, Bash, PowerShell, shell script, Linux, etc), and low level programming (C, C++, assembly, microcontroller, Arduino, etc). Currently I live in Indonesia, I also love Mathematics, science, computers, and other STEM-related topics and stuff.
 
@@ -177,9 +177,9 @@ In the end of 2022 I learned frameworks such as Electron. I also learned Git and
 
 In the year of 2021, I was introduced to a Reddit community called [r/unixporn](https://www.reddit.com/r/unixporn). It is a "geeks-only" Reddit community composed of thousands Linux elitist that loves decorating or ricing their Linux's powered computers. I switched to Manjaro due to the fact that I don't need to upgrade my entire system everytime an update was released, riced my GNOME, then switched to XFCE4, then to i3wm. This is also the phase when I started to editor-hop, (From VS Code to PyCharm to VS Code to Neovim to VS Code to Neovim to VS Code to Emacs to VS Code). I also learn another shell, PowerShell.
 
-<div style="display: flex; justify-content: center;" align="center">
-    <img alt="xfce4-rice-1" src="/pages/about/1.png"/>
-</div>
+<br>
+
+<img alt="xfce4-rice-1" src="images/about/1.png"/>
 
 <br>
 
@@ -189,9 +189,9 @@ In the year of 2021, I was introduced to a Reddit community called [r/unixporn](
 
 <br>
 
-<div style="display: flex; justify-content: center;" align="center">
-    <img alt="xfce4-rice-2" src="/pages/about/2.png"/>
-</div>
+
+<img alt="xfce4-rice-2" src="images/about/2.png"/>
+
 
 <br>
 

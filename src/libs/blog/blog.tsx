@@ -15,17 +15,20 @@ import react, { ReactElement } from "react";
 
 // Next.
 import Image from "next/image";
+import Link from "next/link";
 
 // SCSS.
 import styles from "@styles/preview/preview.module.scss";
 
 // Props interface.
 interface Props {
-  src:   string;
-  alt:   string;
-  text:  string;
-  title: string;
-  date:  string;
+  src:      string;
+  alt:      string;
+  text:     string;
+  title:    string;
+  released: string;
+  modified: string;
+  goto:     string;
 };
 
 // Component.
@@ -38,7 +41,11 @@ class Blog extends react.Component<Props, {}> {
     const alt: string   = this.props.alt;
     const text: string  = this.props.text;
     const title: string = this.props.title;
-    const date: string  = this.props.date;
+
+    const released: string  = this.props.released;
+    const modified: string = this.props.modified;
+
+    const goto: string  = this.props.goto;
 
     return (
     
@@ -53,9 +60,10 @@ class Blog extends react.Component<Props, {}> {
         <div className={styles.descContainer}>
             <h1>{title}</h1>
             <p>{text}</p>
-            <p>{date}</p>
+            <p>Released: {released}</p>
+            <p>Last modified: {modified}</p>
             <div className={styles.buttonContainer}>
-                  <p>Read More</p>
+                  <Link href={goto}><p>Read More</p></Link>
             </div>
         </div>
 

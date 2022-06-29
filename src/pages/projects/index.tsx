@@ -43,14 +43,26 @@ class Projects extends react.Component<Props, {}> {
 
     // Generate projects list.
     const projectItems: any[] = [];
-    
-    this.props.text.forEach((notParsedProject) => {
-      const project = matter(notParsedProject)
-      console.log(`AAAAA ${console.log(project.data.ImageSrc)}`)
+
+    if (this.props.text.length == 0) {
+
       projectItems.push(
-        <Preview src={project.data.imageSrc} alt={project.data.imageAlt} text={project.data.desc} title={project.data.title} goto={project.data.goto} />
+        <p>So far none!</p>
       );
-    });
+
+    } else {
+
+      this.props.text.forEach((notParsedProject) => {
+
+        const project = matter(notParsedProject);
+  
+        projectItems.push(
+          <Preview src={project.data.imageSrc} alt={project.data.imageAlt} text={project.data.desc} title={project.data.title} goto={project.data.goto} />
+        );
+  
+      });
+
+    };
 
     return (
 
@@ -66,8 +78,11 @@ class Projects extends react.Component<Props, {}> {
 
         {/* Body */}
         <div className={styles.pageContainer}>
-          <h1>Projects</h1>
-            {projectItems}
+          <div style={{display: 'flex', justifyContent: 'center', flexDirection: 'column', textAlign: 'center'}}>
+            <h1>Projects</h1>
+            <p>THis is where you can view my current active projects. I write programs in Javascript, Typescript, and Python. I also use several frameworks such as Svelte, React, Angular, and Next.js.</p>
+          </div>
+          {projectItems}
         </div>
 
         {/* Footer */}
@@ -82,11 +97,11 @@ class Projects extends react.Component<Props, {}> {
 };
 
 // Get the projects content via Supabase PostgreSQL REST API.
-export async function getServerSideProps() {
+export function getServerSideProps() {
 
   // Get the path.
   const projectDirectory: string = path.join(
-    process.cwd(), "content/projects/");
+    process.cwd(), "public/content/projects/");
 
   // List all directories.
   const files: string[] = fs.readdirSync(projectDirectory, 'utf8');
@@ -94,7 +109,14 @@ export async function getServerSideProps() {
   const text: string[] = [];
 
   files.forEach((file) => {
-    text.push(path.join(projectDirectory, file));
+
+    text.push(
+      fs.readFileSync(
+        path.join(projectDirectory, file), 
+        {encoding:'utf8', flag:'r'}
+      )
+    );
+
   });
 
   // Pass data to the page via props.

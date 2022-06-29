@@ -1,3 +1,15 @@
+#
+
+#  ./.gitignore
+
+#  Copyright (C) 2022, Anokidev. This file is 
+#  part of Anokidev's website. Anokidev's website 
+#  is open-source and is licensed in MIT License.
+
+#  This file is used as the gitignore config file.
+
+#
+
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
 # dependencies

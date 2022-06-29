@@ -1,34 +1,126 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<!--
 
-## Getting Started
+  ./README.md
 
-First, run the development server:
+  Copyright (C) 2022, Anokidev. This file is 
+  part of Anokidev's website. Anokidev's website 
+  is open-source and is licensed in MIT License.
+
+  README file.
+
+-->
+
+<div style="display: grid; grid-template-row: auto auto; grid-template-column: auto;" align="center">
+  <h1>Website</h1>
+  <i><a href="https://anokidev.netlify.app">https://anokidev.netlify.app</a></i>
+</div>
+
+<hr>
+
+Welcome! This is the official repository for my [website](https://anokidev.netlify.app), I use this website for numerous things that are simple and basic, such as:
+
+- My about website.
+- My resume website (Later, when I will graduate).
+- My blogging website.
+- My projects website.
+
+## Table of Contents:
+
+1. [Technologies](#technologies)
+2. [Running the Project](#running)
+3. [Contributing](#contributing)
+4. [Directory Structure](#structure)
+5. [Reusable Components List](#components)
+5. [Pages List](#pages)
+
+## Technologies <a id="technologies"></a>
+
+This website is powered by numerous web technologies:
+
+- Language:
+  - Typescript (For scripting, Javascript's replacement).
+  - SCSS / Sassy CSS (For styling, CSS's replacement).
+  - TSX (For React template, JSX's replacement).
+- Frameworks:
+  - React (For frontend framework).
+  - Next.JS (For helper framework).
+- Tools:
+  - ESLint (For linting tools).
+  - NPM (For dependency management).
+
+## Running the Project <a id="running"></a>
+
+First of all, you need a tool called "Git". Clone the repository, and then change your current directory to the repo's root directory.
+
+```bash
+git clone https://www.github.com/anokidev/website # Clone the repository.
+cd website # Change your current directory.
+```
+
+Now, you have to install all dependencies, make sure that NPM is installed!
+
+```bash
+npm ci # See all dependencies in package.json
+```
+
+Then, straight up run the project in **development mode**:
 
 ```bash
 npm run dev
-# or
-yarn dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+If you want to run the project in **production mode**, you have to build the project first.
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+```bash
+npm run build # Build the project.
+npm run start # Start the server.
+```
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+Everytime you made a change, don't forget to lint!
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+```bash
+npm run lint # Lint the code.
+```
 
-## Learn More
+## Contributing <a id="contributing"></a>
 
-To learn more about Next.js, take a look at the following resources:
+See [CONTRIBUTING.md](/CONTRIBUTING.md).
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Directory Structure <a id="structure"></a>
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+- ```./.github/``` : For Github related files.
+- ```./public/``` : Every images and contents are located in here.
+  - ```content``` : Content folder.
+  - ```images``` : Images folder.
+- ```./src/``` : Source code.
+  - ```libs``` : Reusable React components.
+  - ```pages``` : Next.js pages.
+  - ```styles``` : SCSS stylesheet folder.
+- ```./.eslintrc.json``` : ESLint config file.
+- ```./.gitignore``` : Git Ignore file.
+- ```./.projectile``` : Projectile config file.
+- ```./CODE_OF_CONDUCT.md``` : Code of conduct file.
+- ```./CONTRIBUTING.md``` : Contribution guide file.
+- ```./LICENSE.md``` : License file.
+- ```./next.config.js``` : Next.JS config file.
+- ```./package.json``` : Dependency list file.
+- ```./package-lock.json``` : "A manifestation of the manifest".
+- ```./README.md``` : README file.
+- ```./tsconfig.json``` : Typescript configuration file.
 
-## Deploy on Vercel
+## Reusable Components List <a id="components"></a>
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- ```blog``` : For blogs preview box. You can see these components in action by going to ```/blogs/```.
+- ```footer``` : For page footer. Containing copyright message, and powered by message.
+- ```header``` : For page header. Containing a navigation bar (navbar).
+- ```md``` : For parsing markdown contents.
+- ```preview``` : Similar to blogs, but this time there are no "released" and "last modified" messages. Used for project lists (```/projects```) and website intro at ```/home```.
+- ```slideshow``` : For images slideshow.
+- ```under-construction``` : For under construction warning banner.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## Pages List <a id="pages"></a>
+
+- ```/home``` : Homepage.
+- ```/projects``` : Projects.
+- ```/blogs``` : Blogs.
+- ```/about``` : About.

@@ -1,12 +1,12 @@
 /*
 
-  ./src/pages/projects/[id].tsx
+  ./src/pages/blogs/[id].tsx
 
   Copyright (C) 2022, Anokidev. This file is 
   part of Anokidev's website. Anokidev's website 
   is open-source and is licensed in MIT License.
 
-  This file is used as the projects IDs page.
+  This file is used as the blogs IDs page.
 
 */
 
@@ -35,7 +35,7 @@ interface Props {
   text: string;
 };
 
-class ProjectContent extends react.Component<Props, {}> {
+class BlogContent extends react.Component<Props, {}> {
 
   // Render.
   render(): ReactElement {
@@ -49,7 +49,7 @@ class ProjectContent extends react.Component<Props, {}> {
 
         {/* Head */}
         <Head>
-          <title>{md.data.title} - Projects | Anokidev</title>
+          <title>{md.data.title} - Blogs | Anokidev</title>
         </Head>
 
         {/* Header */}
@@ -57,6 +57,10 @@ class ProjectContent extends react.Component<Props, {}> {
 
         {/* Body */}
         <div className={styles.pageContainer}>
+          <h1>{md.data.title}</h1>
+          <p>Released: {md.data.released}</p>
+          <p>Last modified: {md.data.modified}</p>
+          <hr style={{margin: 0}}></hr>
           <Md text={md.content}/>
         </div>
 
@@ -80,7 +84,7 @@ export function getServerSideProps(context: any) {
 
   // Get the path.
   const projectDirectory: string = path.join(
-    process.cwd(), "public/content/projects/");
+    process.cwd(), "public/content/blogs/");
 
   // List all files.
   const files: string[] = fs.readdirSync(projectDirectory, 'utf8');
@@ -106,4 +110,4 @@ export function getServerSideProps(context: any) {
   
 };
 
-export default ProjectContent;
+export default BlogContent;

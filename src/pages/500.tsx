@@ -15,11 +15,15 @@ import react, { ReactElement } from "react";
 
 // Next head.
 import Head from "next/head";
-import Link from "next/link";
+
+// Libs.
+import Header from "@libs/header/header";
+import Footer from "@libs/footer/footer";
 
 // SCSS.
 import styles from "@styles/page/page.module.scss";
 
+// Page.
 // Page.
 class Custom500Page extends react.Component {
 
@@ -35,33 +39,22 @@ class Custom500Page extends react.Component {
           <title>500 - Internal Server Error | Anokidev</title>
         </Head>
 
+        {/* Header */}
+        <Header/>
+
         {/* Body */}
         <div className={styles.pageContainer}>
+          <h1 style={{fontSize: '575%'}}>:(</h1>
           <h1>An error has occurred.</h1>
-          <h3>500: Internal server error.</h3>
-          <p>This is caused by an internal server error. Only the administrator can fix this error.</p>
-          <div className={styles.buttonContainer}>
-            <Link href="/home"> Go Back to Home</Link>
-          </div>
-          <br></br>
-          <br></br>
-          <br></br>
-          <br></br>
-          <br></br>
-          <br></br>
-          <br></br>
-          <br></br>
-          <br></br>
-          <br></br>
-          <br></br>
-          <br></br>
-          <br></br>
-          <br></br>
-          <br></br>
+          <h3>500: Internal Server Error</h3>
+          <p>This is caused by an internal server error that occured between the frontend and the backend. This is not your fault, this is the website&apos;s fault. Usually caused by backend errors. Only the admin of this website can fix this error.</p>
           <br></br>
           <br></br>
           <br></br>
         </div>
+
+        {/* Footer */}
+        <Footer/>
 
       </>
 
