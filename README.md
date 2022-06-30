@@ -102,6 +102,8 @@ See [CONTRIBUTING.md](/CONTRIBUTING.md).
 - ```./CODE_OF_CONDUCT.md``` : Code of conduct file.
 - ```./CONTRIBUTING.md``` : Contribution guide file.
 - ```./LICENSE.md``` : License file.
+- ```./netlify.toml``` : Netlify config file.
+- ```./next-env.d.ts``` : Next.js env file, should not be edited!
 - ```./next.config.js``` : Next.JS config file.
 - ```./package.json``` : Dependency list file.
 - ```./package-lock.json``` : "A manifestation of the manifest".
