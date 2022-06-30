@@ -61,16 +61,16 @@ There are 2 reasons:
 
 ### Cascading concepts are executed so poorly.
 
-For example, if a parent element sets a property called ```text-decoration``` ```none```, it's child element can not override the ```text-decoration``` value. Why? Because W3C said so! There are several properties that you can not override. It is frustating, you can try to use ```<span>```, but in my recent project, it fails. You can not avoid this.
+For example, if a parent element sets a property called ```text-decoration``` ```none```, it's child element can not override the ```text-decoration``` value. Why? Because W3C said so! There are several properties that you can not override. It is frustating, you can try to use ```<span>```, but in my recent project, it fails. You can not avoid this problem.
 
 ### Margin and padding are like magic when there are multiple elements.
 
-The concept of margin and padding are simple. But, when there are multiple elements, you got a really confusing graphical errors, and then, you ended up doing the trial and error method by setting the values of margin, padding, width, and height. The only way to avoid this kind of stuff is by using the browser's builtin devtools, and by understanding the 'box' concept.
+The concept of margin and padding are simple. But, when there are multiple elements, you got a really confusing graphical errors, and then, you ended up doing the trial and error method by setting the values of margin, padding, width, and height. The only way to avoid this problem is by using the browser's builtin devtools, and by understanding the 'box' concept.
 
 ### Backwards compabillity.
 
-Sometimes you have to set 4 different values just to make sure that your website supports multiple browsers.
+Sometimes you have to set 4 different values just to make sure that your website supports multiple browsers. You can not avoid this problem.
 
 <br>
 
-If you want to make sure that you are not frustated, I suggest you to use Bootstrap of Tailwind if you are a professional who wants to build a website in a non-lengthy time. But if you want to learn CSS, use vanilla CSS, no pain, no gain!
+If you want to make sure that you are not frustated, I suggest you to use CSS frameworks and libraries Bootstrap or Tailwind if you are a professional who wants to build a website in a non-lengthy time. But if you want to learn CSS, use vanilla CSS. Remember: No pain, no gain!
