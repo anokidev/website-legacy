@@ -90,12 +90,12 @@ See [CONTRIBUTING.md](/CONTRIBUTING.md).
 
 - ```./.github/``` : For Github related files.
 - ```./public/``` : Every images and contents are located in here.
-  - ```content``` : Content folder.
-  - ```images``` : Images folder.
+  - ```content/``` : Content folder.
+  - ```images/``` : Images folder.
 - ```./src/``` : Source code.
-  - ```libs``` : Reusable React components.
-  - ```pages``` : Next.js pages.
-  - ```styles``` : SCSS stylesheet folder.
+  - ```libs/``` : Reusable React components.
+  - ```pages/``` : Next.js pages.
+  - ```styles/``` : SCSS stylesheet folder.
 - ```./.eslintrc.json``` : ESLint config file.
 - ```./.gitignore``` : Git Ignore file.
 - ```./.projectile``` : Projectile config file.
