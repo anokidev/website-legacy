@@ -76,7 +76,7 @@ class About extends react.Component<Props, {}> {
 export async function getServerSideProps() {
 
   // Get the path, then read.
-  const contentDirectory: string = path.join(process.cwd(), 'public/content/about');
+  const contentDirectory: string = "public/content/about";
   const fullPath: string = path.join(contentDirectory, 'about.md');
   const data: string = fs.readFileSync(fullPath, 'utf8');
 

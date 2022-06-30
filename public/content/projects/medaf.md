@@ -32,7 +32,7 @@ You can install medaf through 2 ways:
 
 PIP is the official Python package manager, you can easily install PIP by using this method:
 
-```bash
+```text
 pip install medaf
 ```
 
@@ -42,7 +42,7 @@ First of all, make sure that you already install Git.
 
 For NIX system (Linux, Mac OS, BSD, Solaris, UNIX) via Bash:
 
-```bash
+```text
 $ git clone https://github.com/project-medaf/source.git
 $ cd source
 $ ./install-for-nix.sh
@@ -50,10 +50,10 @@ $ ./install-for-nix.sh
 
 For Windows system via PowerShell:
 
-```powershell
+```text
 > git clone https://github.com/project-medaf/source.git
 > cd source
-> ./install-for-win.sh
+> .\install-for-win.sh
 ```
 
 ## Usage: <a id="usage"></a>

@@ -79,8 +79,7 @@ export function getServerSideProps(context: any) {
   const { id } = context.query;
 
   // Get the path.
-  const projectDirectory: string = path.join(
-    process.cwd(), "public/content/projects/");
+  const projectDirectory: string = "public/content/projects/";
 
   // List all files.
   const files: string[] = fs.readdirSync(projectDirectory, 'utf8');

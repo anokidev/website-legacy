@@ -100,8 +100,7 @@ class Blogs extends react.Component<Props, {}> {
 export function getServerSideProps() {
 
   // Get the path.
-  const blogDirectory: string = path.join(
-    process.cwd(), "public/content/blogs/");
+  const blogDirectory: string = "public/content/blogs/";
 
   // List all directories.
   const files: string[] = fs.readdirSync(blogDirectory, 'utf8');

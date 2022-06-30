@@ -100,8 +100,7 @@ class Projects extends react.Component<Props, {}> {
 export function getServerSideProps() {
 
   // Get the path.
-  const projectDirectory: string = path.join(
-    process.cwd(), "public/content/projects/");
+  const projectDirectory: string = "public/content/projects/";
 
   // List all directories.
   const files: string[] = fs.readdirSync(projectDirectory, 'utf8');

@@ -25,7 +25,7 @@ I already touched computers since I was a kind, I also fell in love with compute
 
 After that, I started to learn Batchfile, the main scripting language that is used by a popular terminal emulator that is called Windows Command Prompt (cmd.exe). Personally, I don't really like Batchfile, because it's features are quirky. Hell, even the official manual for the set command is really long. Btw, this is a block of code that I wrote in Batchfile way back in 2020:
 
-```batch
+```bat
 TITLE Advanced Calculator
 @ECHO OFF
 CLS
