@@ -1,5 +1,5 @@
 ---
-title: "Why CSS Sucks, and How to Avoid the Frustation when dealing with CSS."
+title: "Why CSS sucks, and how to avoid the frustation when dealing with CSS."
 desc: "CSS, also known as Castading Style Sheet, is a pretty much the de-facto standard when it comes to decorating the web. CSS is probably one of the first thing that you touched when you are learning web development. However, as a guy who already got my hands dipped into the messy soup of web development, I will say one thing: CSS sucks. Here's why."
 goto: "/blogs/why-css-sucks"
 imageSrc: "/images/blogs/why-css-sucks/css-is-awesome.png"
