@@ -22,21 +22,35 @@ import '@styles/globals/globals.scss';
 
 function MyApp({ Component, pageProps }: AppProps): ReactElement {
 
-  // Include some meta tags.
+  // Include some meta tags and links.
   return (
+
     <>
+
+      {/* Head */}
       <Head>
+
+      {/* Description Meta Tag */}
       <meta name="author" content="anokidev" />
       <meta name="description" content="The official blog of anokidev" />
       <meta name="keywords" content="anokidev, dev, developers, programming, hobby, coding, tech" />
       <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-      <meta name="google-site-verification" content="wFKHRg78m9HpD5aHjzhhP4uqkPEp3icUurOWtIYLwE8" />
+
+      {/* Google Site Verification, Do Not Remove! */}
+      <meta name="google-site-verification" content="_rbPFDCndSfOEcJyXTyWQixO4xB1Tn0cSFAZv1oNpM8" />
+
+      {/* Favicon */}
       <link rel="icon" href="favicon.png" />
+
       </Head>
+
+      {/* Page */}
       <Component {...pageProps} />
+
     </>
+
   );
 
-}
+};
 
 export default MyApp;
