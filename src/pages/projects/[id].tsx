@@ -73,7 +73,7 @@ class ProjectContent extends react.Component<Props, {}> {
 };
 
 // Get the projects content that is stored in contents directory.
-export function getServerSideProps(context: any) {
+export async function getServerSideProps(context: any) {
 
   // ID.
   const { id } = context.query;

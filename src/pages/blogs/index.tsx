@@ -97,7 +97,7 @@ class Blogs extends react.Component<Props, {}> {
 };
 
 // Get the projects content via Supabase PostgreSQL REST API.
-export function getServerSideProps() {
+export async function getServerSideProps() {
 
   // Get the path.
   const blogDirectory: string = "public/content/blogs/";

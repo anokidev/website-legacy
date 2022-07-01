@@ -5,7 +5,7 @@ goto: "/blogs/why-css-sucks"
 imageSrc: "/images/blogs/why-css-sucks/css-is-awesome.png"
 imageAlt: "why-css-sucks"
 released: "28-06-2022"
-modified: "28-06-2022"
+modified: "30-06-2022"
 ---
 
 [Image source](https://dev.to/vicainelli/css-is-awesome-3dca).
