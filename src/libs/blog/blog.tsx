@@ -18,7 +18,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 // SCSS.
-import styles from "@styles/preview/preview.module.scss";
+import styles from "@styles/preview/preview-blogs.module.scss";
 
 // Props interface.
 interface Props {
@@ -62,8 +62,12 @@ class Blog extends react.Component<Props, {}> {
             <p>{text}</p>
             <p>Released: {released}</p>
             <p>Last modified: {modified}</p>
-            <div className={styles.buttonContainer}>
-                  <Link href={goto}><p>Read More</p></Link>
+            <div className={styles.buttonWrapperContainer}>
+              <Link href={goto}>
+                <div className={styles.buttonContainer}>
+                  <p>Read More</p>
+                </div>
+              </Link>
             </div>
         </div>
 

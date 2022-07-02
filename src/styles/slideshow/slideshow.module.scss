@@ -82,7 +82,7 @@
     align-items: center;
     justify-content: center;
 
-    width: 25%;
+    width: 35%;
     height: 85%;
     padding: 1%;
 
@@ -113,6 +113,14 @@
 };
 
 // Gotta stay responsive!
+@media (max-width: 900px) {
+
+    .buttonContainer {
+        width: 60%;
+    };
+
+};
+
 @media (max-width: 800px) {
 
     .previewContainer {

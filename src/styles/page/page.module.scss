@@ -68,18 +68,44 @@
 
 };
 
+.headingContainer {
+
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+
+};
+
+.centerContainer {
+
+    display: flex;
+    justify-content: center;
+
+};
+
 @media (max-width: 600px) {
     .pageContainer {
-        font-size: 15px;
+        font-size: 19px;
     };
 };
 
 @media (max-width: 450px) {
     .pageContainer {
         h1 {
-            font-size: 20px;
+            font-size: 22px;
         };
-        font-size: 10px;
+        font-size: 17px;
+        padding: 40px;
+    };
+};
+
+@media (max-width: 1000px) {
+    .pageContainer {
+        h1 {
+            font-size: 22px;
+        };
+        font-size: 20px;
         padding: 40px;
     };
 };

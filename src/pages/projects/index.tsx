@@ -78,7 +78,7 @@ class Projects extends react.Component<Props, {}> {
 
         {/* Body */}
         <div className={styles.pageContainer}>
-          <div style={{display: 'flex', justifyContent: 'center', flexDirection: 'column', textAlign: 'center'}}>
+          <div className={styles.headingContainer}>
             <h1>Projects</h1>
             <p>THis is where you can view my current active projects. I write programs in Javascript, Typescript, and Python. I also use several frameworks such as Svelte, React, Angular, and Next.js.</p>
           </div>
@@ -96,7 +96,7 @@ class Projects extends react.Component<Props, {}> {
 
 };
 
-// Get the projects content via Supabase PostgreSQL REST API.
+// Get the project contents.
 export async function getServerSideProps() {
 
   // Get the path.

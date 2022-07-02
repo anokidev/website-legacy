@@ -52,12 +52,12 @@ class Blogs extends react.Component<Props, {}> {
 
     } else {
 
-      this.props.text.forEach((notParsedProject) => {
+      this.props.text.forEach((notParsedBlog) => {
 
-        const project = matter(notParsedProject);
+        const blogs = matter(notParsedBlog);
   
         blogItems.push(
-          <Blog src={project.data.imageSrc} alt={project.data.imageAlt} text={project.data.desc} title={project.data.title} goto={project.data.goto} released={project.data.released} modified={project.data.modified}/>
+          <Blog src={blogs.data.imageSrc} alt={blogs.data.imageAlt} text={blogs.data.desc} title={blogs.data.title} goto={blogs.data.goto} released={blogs.data.released} modified={blogs.data.modified}/>
         );
   
       });
@@ -78,7 +78,7 @@ class Blogs extends react.Component<Props, {}> {
 
         {/* Body */}
         <div className={styles.pageContainer}>
-          <div style={{display: 'flex', justifyContent: 'center', flexDirection: 'column', textAlign: 'center'}}>
+          <div className={styles.headingContainer}>
             <h1>Blogs</h1>
             <p>Sometimes I rant about something, sometimes I explore something, sometimes I teach something. This is my blog, where you can find my blog articles.</p>
           </div>
@@ -96,14 +96,14 @@ class Blogs extends react.Component<Props, {}> {
 
 };
 
-// Get the projects content via Supabase PostgreSQL REST API.
+// Get the blog contents.
 export async function getServerSideProps() {
 
   // Get the path.
-  const blogDirectory: string = "public/content/blogs/";
+  const blogsDirectory: string = "public/content/blogs/";
 
   // List all directories.
-  const files: string[] = fs.readdirSync(blogDirectory, 'utf8');
+  const files: string[] = fs.readdirSync(blogsDirectory, 'utf8');
 
   const text: string[] = [];
 
@@ -111,7 +111,7 @@ export async function getServerSideProps() {
 
     text.push(
       fs.readFileSync(
-        path.join(blogDirectory, file), 
+        path.join(blogsDirectory, file), 
         {encoding:'utf8', flag:'r'}
       )
     );

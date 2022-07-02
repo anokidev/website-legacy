@@ -54,9 +54,9 @@ class About extends react.Component<Props, {}> {
 
         {/* Body */}
         <div className={styles.pageContainer}>
-          <div style={{display: 'flex', justifyContent: 'center', flexDirection: 'column', textAlign: 'center'}}>
+          <div className={styles.headingContainer}>
             <h1>About</h1>
-            <p>This is my about page.</p>
+            <p>My name is Anoki, and this is my about page.</p>
           </div>
           <Md text={this.props.data}/>
         </div>
