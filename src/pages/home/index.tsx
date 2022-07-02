@@ -164,7 +164,7 @@ class Home extends react.Component<Props, {}> {
           
           <div className={styles.headingContainer}>
             <h1>Projects</h1>
-            <p>Since I am a developer, I also started some projects, most of them are abandoned, but I am focusing on Python projects right now.You can find more by clicking the 'More' button.</p>
+            <p>Since I am a developer, I also started some projects, most of them are abandoned, but I am focusing on Python projects right now.You can find more by clicking the &apos;More&apos; button.</p>
           </div>
 
           {projectItems}
